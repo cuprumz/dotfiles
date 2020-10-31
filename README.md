@@ -1,2 +1,2 @@
-Here is my dotfiles and configuration files
+Here is my dotfiles and configuration files.
 
