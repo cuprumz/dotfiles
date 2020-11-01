@@ -83,26 +83,7 @@ mount /dev/boot_partition /mnt/boot
 swapon /dev/swap_parttion
 ```
 
-7. Configuring mkinitcpio.`/etc/mkinitcpio.conf`
-
-```bash
-HOOKS=(base systemd autodetect keyboard sd-vconsole modconf block sd-encrypt sd-lvm2 filesystems fsck) # sd-encrypt
-```
-
-8. `/etc/vconsole.conf`.
-
-```bash
-KEYMAP=us
-```
-
-9. Configuring the boot loader.` /etc/crypttab.initramfs`,注意是需要解密的设备UUID.
-
-```bash
-# <name>       <device>                                     <password>              <options>
-externaldrive         UUID=2f9a8428-ac69-478a-88a2-4aa458565431        none    luks,timeout=16
-```
-
-10. Select the mirrors.选择镜像
+7. Select the mirrors.选择镜像
 
 ```bash
 ##
@@ -134,32 +115,32 @@ Server = https://mirrors.xjtu.edu.cn/archlinux/$repo/os/$arch
 Server = http://mirrors.zju.edu.cn/archlinux/$repo/os/$arch
 ```
 
-11. Install essential packages.
+8. Install essential packages.
 
 ```bash
 pacstrap /mnt base base-devel linux linux-firmware
 ```
 
-12. Fstab.
+9. Fstab.
 
 ```bash
 genfstab -U /mnt >> /mnt/etc/fstab # check:`cat /mnt/etc/fstab`
 ```
 
-13. Chroot.
+10. Chroot.
 
 ```bash
 arch-chroot /mnt
 ```
 
-14. Time zone.
+11. Time zone.
 
 ```bash
 ln -sf /usr/share/zoneinfo/<Asia>/<Shanghai> /etc/localtime
 hwclock --systohc
 ```
 
-15. Localization.
+12. Localization.
 
 Edit `/etc/locale.gen` and uncomment `en_US.UTF-8 UTF-8` and other needed [locales](https://wiki.archlinux.org/index.php/Locale). Generate the locales by running:
 
@@ -174,7 +155,7 @@ Create the [locale.conf(5)](https://jlk.fjfi.cvut.cz/arch/manpages/man/locale.co
 LANG=en_US.UTF-8
 ```
 
-16. Network configuration. [`/etc/systemd/network/20-wired.network`](./etc/systemd/network/20-wired.network)
+13. Network configuration. [`/etc/systemd/network/20-wired.network`](./etc/systemd/network/20-wired.network)
 
 Create the [hostname](https://wiki.archlinux.org/index.php/Hostname) file:
 
@@ -191,6 +172,26 @@ Add matching entries to [hosts(5)](https://jlk.fjfi.cvut.cz/arch/manpages/man/ho
 ::1		localhost
 127.0.1.1	myhostname.localdomain	myhostname
 ```
+
+14. Configuring mkinitcpio.`/etc/mkinitcpio.conf`
+
+```bash
+HOOKS=(base systemd autodetect keyboard sd-vconsole modconf block sd-encrypt sd-lvm2 filesystems fsck) # sd-encrypt
+```
+
+15. /etc/vconsole.conf`.
+
+```bash
+KEYMAP=us
+```
+
+16. Configuring the boot loader.` /etc/crypttab.initramfs`,注意是需要解密的设备UUID.
+
+```bash
+# <name>       <device>                                     <password>              <options>
+externaldrive         UUID=2f9a8428-ac69-478a-88a2-4aa458565431        none    luks,timeout=16
+```
+
 
 17. GRUB.`dosfstools`, `grub`, `efibootmgr`, `os-prober` packages
 
