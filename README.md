@@ -244,14 +244,24 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 xorg \
 cinnamon slim \
 qemu libvirt virt-viewer virt-manager \
-openssh \
-firefox \
+emacs vim \
+openssh netcat \
+firefox chromium \
 visual-studio-code-bin \
 telegram-desktop \
 typora \
 libreoffice-fresh \
 p7zip \
+evince gwenview file-roller \
+rsync rslsync \
+youtube-dl \
+smplayer vlc \
+geogebra \
+audacity \
 fcitx fcitx-rime fcitx-qt5 \
+gnome-system-monitor gnome-usage gnome-latex gnome-todo gnome-notes galculator htop \
+maven cmake \
+jq \
 ntfs-3g \
 TODO
 ```
