@@ -2,7 +2,7 @@ Here is my dotfiles and configuration files.
 
 
 
-## Arch GNU/Linux
+## Arch Linux
 
 Installation guide see [HERE](https://wiki.archlinux.org/index.php/installation_guide).
 
