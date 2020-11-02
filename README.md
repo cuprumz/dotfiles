@@ -242,12 +242,14 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 
 ```
 xorg \
-cinnamon \
+cinnamon slim \
+qemu libvirt virt-viewer virt-manager \
 openssh \
 firefox \
 visual-studio-code-bin \
 telegram-desktop \
 typora \
+libreoffice-fresh \
 p7zip \
 fcitx fcitx-rime fcitx-qt5 \
 ntfs-3g \
