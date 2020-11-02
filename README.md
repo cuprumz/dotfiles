@@ -71,7 +71,6 @@ lvcreate -l 100%FREE MyVolGroup -n home
 mkfs.vfat -F32 /dev/sdxY　# 双系统下不需要，windows已经有了esp分区，挂载即可
 mkfs.ext4 /dev/root_partition
 mkswap /dev/swap_partition
-swapon /dev/swap_partition
 ```
 
 6. Mount the file systems. 挂载分区
