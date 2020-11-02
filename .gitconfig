@@ -4,3 +4,5 @@
 	signingkey = 9B3171331EBE2A8CF4E88F72C829C7D3068E66CE
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+	editor = vim
