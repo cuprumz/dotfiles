@@ -244,7 +244,7 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 ```
 xorg \
 cinnamon slim \
-qemu libvirt virt-viewer virt-manager \
+qemu libvirt virt-viewer virt-manager ebtables dnsmasq bridge-utils openbsd-netcat \
 emacs vim \
 openssh netcat \
 firefox chromium \
