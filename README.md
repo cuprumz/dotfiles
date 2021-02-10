@@ -184,7 +184,7 @@ HOOKS=(base systemd autodetect keyboard sd-vconsole modconf block sd-encrypt sd-
 KEYMAP=us
 ```
 
-16. Configuring the boot loader.` /etc/crypttab.initramfs`,注意是需要解密的设备UUID.
+16. Configuring the boot loader.` /etc/crypttab.initramfs`,注意是需要解密的设备UUID.重新生成initramfs-linux.img
 
 ```bash
 # <name>       <device>                                     <password>              <options>
