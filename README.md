@@ -54,6 +54,7 @@ pvcreate /dev/mapper/cryptlvm
 3. 创建**vg**.
 
 ```bash
+# 修改vg名称后需要重新生成grub.cfg
 vgcreate MyVolGroup /dev/mapper/cryptlvm
 ```
 
