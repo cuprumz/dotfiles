@@ -173,10 +173,10 @@ Add matching entries to [hosts(5)](https://jlk.fjfi.cvut.cz/arch/manpages/man/ho
 127.0.1.1	myhostname.localdomain	myhostname
 ```
 
-14. Configuring mkinitcpio.`/etc/mkinitcpio.conf`
+14. Configuring mkinitcpio.`/etc/mkinitcpio.conf` `lvm2` package required
 
 ```bash
-HOOKS=(base systemd autodetect keyboard sd-vconsole modconf block sd-encrypt sd-lvm2 filesystems fsck) # sd-encrypt
+HOOKS=(base systemd autodetect keyboard sd-vconsole modconf block sd-encrypt lvm2 filesystems fsck) # sd-encrypt
 ```
 
 15. /etc/vconsole.conf`.
