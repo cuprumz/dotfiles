@@ -1,0 +1,8 @@
+fcitx5
+
+fcitx5-rime
+
+fcitx5-chinese-addons
+
+~/.config/fcitx5/profile
+    Name=rime
